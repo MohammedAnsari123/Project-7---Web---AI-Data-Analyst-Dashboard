@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000/api',
+  baseURL: import.meta.env.VITE_API_BASE_URL || 'https://project-7-web-ai-data-analyst-dashboard-rwm8.onrender.com/api',
 });
 
 // Add a request interceptor to include JWT token

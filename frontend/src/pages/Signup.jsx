@@ -23,7 +23,7 @@ const Signup = () => {
     setIsLoading(true);
     setError('');
     try {
-      const res = await axios.post('http://localhost:5000/api/auth/register', formData);
+      const res = await axios.post('https://project-7-web-ai-data-analyst-dashboard-rwm8.onrender.com/api/auth/register', formData);
       localStorage.setItem('token', res.data.token);
       navigate('/dashboard');
     } catch (err) {
