@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-import axios from 'axios';
+import api from '../services/api';
 import { motion } from 'framer-motion';
 import { 
   Key, 
@@ -23,7 +23,7 @@ const Signup = () => {
     setIsLoading(true);
     setError('');
     try {
-      const res = await axios.post('https://project-7-web-ai-data-analyst-dashboard-rwm8.onrender.com/api/auth/register', formData);
+      const res = await api.post('/auth/signup', formData);
       localStorage.setItem('token', res.data.token);
       navigate('/dashboard');
     } catch (err) {
